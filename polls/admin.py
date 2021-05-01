@@ -1,6 +1,9 @@
 from django.contrib import admin
 
 from .models import Question, Choice
+from django.contrib.auth import get_user_model
+
+User = get_user_model()
 
 admin.site.site_header = "Pollster Admin"
 admin.site.site_title = "Pollster Admin Area"
@@ -20,4 +23,5 @@ class QuestionAdmin(admin.ModelAdmin):
 
 # admin.site.register(Question)
 # admin.site.register(Choice)
+admin.site.register(User)
 admin.site.register(Question, QuestionAdmin)
