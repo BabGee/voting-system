@@ -9,7 +9,7 @@
 <ul class="list-group mb-5">
 	{% for choice in question.choice_set.all %}
 	<li class="list-group-item">
-		{{ choice.choice_text }}  <span class="badge badge-success float-right">{{ choice.votes }} vote{{ choice.votes | pluralize }}</span>
+		{{ choice.choice_text }}  <span class="badge badge-primary float-right">{{ choice.votes }} vote{{ choice.votes | pluralize }}</span>
 	</li>
 	{% endfor %}
 </ul>
@@ -17,8 +17,8 @@
 <div id="myChart"></div>
 
 <div class="mb-4 mx-4">
-<a class="btn btn-info ml-4" href="{% url 'polls:index' %}">Back To Polls</a>
-<a class="btn btn-dark ml-4" href="{% url 'polls:detail' question.id %}">Vote again?</a>
+<a class="btn btn-success ml-4" href="{% url 'polls:index' %}">Back To Polls</a>
+<!-- <a class="btn btn-danger ml-4" href="{% url 'polls:detail' question.id %}">Vote again?</a> -->
 </div>
 
 <script>
